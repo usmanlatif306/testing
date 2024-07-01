@@ -33,13 +33,40 @@
     <main>
       <div>
         <h2>Home</h2>
-        <p>
+        <p class="mb">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quasi
           voluptatum laboriosam quia nulla, possimus aliquid! Doloremque aut
           soluta ipsa. Voluptatum ducimus quos sit quis temporibus earum
           corporis dolorem magni?
         </p>
+        <button id="login" class="btn">Login</button>
       </div>
     </main>
+
+    <script>
+      const login = document.getElementById("login");
+      login.addEventListener("click", async () => {
+        var myHeaders = new Headers();
+        myHeaders.append("origin", "https://demo.roamingiq.com");
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: JSON.stringify({
+            EmailAddress: "kamran.tahir454@gmail.com",
+            Password: "Lahore@00100",
+          }),
+          redirect: "follow",
+        };
+
+        fetch(
+          "https://api.wifikey.io/v1/subscriberconsole/login",
+          requestOptions
+        )
+          .then((response) => response.json())
+          .then((result) => console.log(result))
+          .catch((error) => console.log("error", error));
+      });
+    </script>
   </body>
 </html>

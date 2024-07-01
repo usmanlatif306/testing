@@ -24,7 +24,47 @@
 .checkBtn {
   display: none;
 }
+.block {
+  display: block;
+}
+.mt {
+  margin-top: 1rem;
+}
+.mb {
+  margin-bottom: 1rem;
+}
+.btn {
+  background-color: #ea4c89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
+.btn:hover,
+.btn:focus {
+  background-color: #f082ac;
+}
 #check {
   display: none;
 }
